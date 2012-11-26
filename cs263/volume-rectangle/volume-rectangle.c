@@ -3,6 +3,7 @@
 /* Author:  Jay Franklin                    */
 /* Created: 20121126                        */
 /* Version: 1.2                             */
+/* Contact: john.jay.franklin@gmail.com     */
 /*                                          */
 /********************************************/
 /* Changelog:                               */
