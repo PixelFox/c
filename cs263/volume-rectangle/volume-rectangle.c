@@ -20,24 +20,29 @@
 /*                                          */
 /********************************************/
 
-#include <stdio.h>    // required for input/output
+// required for input/output
+#include <stdio.h>    
 
-int main() {	     // begin main function
+// begin main function
+int main() {	     
 
-	int length, width, height;  // initialize three required variables
-
+	// initialize three required variables as integers
+	int length, width, height;  
 	// interact with user
 	printf("Please input the length, width, and height of rectangle seperated by spaces followed by <enter> or <return>.\n");
-	// scanf("%d",&length,"%d",&width,"%d",&length);   <-- incorrect. 
-	scanf("%d %d %d",&length,&width,&height);
+	// scanf("%d",&length,"%d",&width,"%d",&length);   <-- incorrect  (left for learning :)
+ 	scanf("%d %d %d",&length,&width,&height); // grab input and store 3 values seperated by space as integers stored in length, width, height
 	
 	// Compute the volume
-	int volume;
-	volume = length * width * height;
+	int volume;  				// initialize volume as integer
+	volume = length * width * height;	// set volume to the result of length x width x height
 
 	// Output the results
 	printf("\n\n\nProvided Values:\n\tlength:\t%d\n\twidth:\t%d\n\tlength:\t%d\n\nComputed Results:\n\tVolume:\t%d\n\n",length,width,height,volume);
 
+	// All done. Let's exit and send an 'ok' to the system
 	return 0;
+
+	// TODO: Add error checking for input values (ensure input is integer type, ensure only three inputs are given)
 }
 
