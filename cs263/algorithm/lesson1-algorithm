@@ -1,0 +1,9 @@
+
+Input the diameter
+Input the velocity
+ Calculate the volume of water
+	r = d/2
+	area = (pi) * v
+	volume = area * v
+Output "d = $diameter, v = $velocity, volume = $volume"
+End
