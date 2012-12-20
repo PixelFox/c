@@ -23,7 +23,7 @@
 /********************************************/
 
 // required for input/output
-#include <stdio.h>    
+#include <stdio.h>
 
 // begin main function
 int main() {	     
@@ -33,20 +33,53 @@ int main() {
 	float aluminum=15000;
 	float copper=20000;
 	float area;
+    float radius;
 	float pi=3.141592;
+    float input;
+    float alumdiam;
+    float steeldiam;
+    float copperdiam;
+    float alumarea;
+    float steelarea;
+    float copperarea;
+    
+    
 
 	// interact with user
-	printf("Please input the diameter in inches\n");
-	scanf("%f",&d); 
-	printf("Please input the velocity in feet per second\n");
-	scanf("%f",&v); 
+	printf("Please input the compression load\n");
+	scanf("%f",&input);
 	
-	// Compute the volume
-	area=(pi*d*2)/4;
-	q=area*v;
+	// Compute the compression load for all materials
+    // Steel first...
+    steelarea=(input/steel);
+    radius=(pi/steelarea);
+    radius=sqrt(radius);
+    radius=radius*1000;
+    steeldiam=radius;
+    radius=0;
+    
+    // Alum next...
+    alumarea=(input/aluminum);
+    radius=(pi/alumarea);
+    radius=sqrt(radius);
+    radius=radius*1000;
+    alumdiam=radius;
+    radius=0;
+    
+    // Copper last...
+    copperarea=(input/copper);
+    radius=(pi/copperarea);
+    radius=sqrt(radius);
+    radius=radius*1000;
+    copperdiam=radius;
+    radius=0;
+    
+    
+    
 
 	// Output the results
-	printf("\n\n\nProvided Values:\n\tdiameter:\t\t%f\n\tvelocity:\t\t%f\n\nComputed Results:\n\tArea:\t\t\t%f\n\tVolume flow rate:\t%f\n\n",d,v,area,q);
+	printf("\n\n\nProvided Values:\n\tCompression Load:\t\t%f\n\n",input);
+    printf("Computed Results:\n\tSteel Area:\t\t\t%f\n\tSteel Diameter:\t\t\t%f\n\n\tAluminum Area:\t\t\t%f\n\tAluminum Diameter:\t\t%f\n\n\tCopper Area:\t\t\t%f\n\tCopper Diameter:\t\t%f\n\n", steelarea,steeldiam,alumarea,alumdiam,copperarea,copperdiam);
 
 	// All done. Let's exit and send an 'ok' to the system
 	return 0;
